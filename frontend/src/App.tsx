@@ -23,6 +23,7 @@ function App() {
         const response = await fetch(`${Config.WEB_ADDRESS}/models`);
         const json = await response.json();
         setModels(json);
+        setSelectedModel(json[0].name)
       } catch (e) {
         console.error(e);
       };
